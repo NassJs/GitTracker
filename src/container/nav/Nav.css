@@ -1,0 +1,34 @@
+.contains-nav{
+    /* padding-left: 20px; */
+    padding-right: 20px;
+}
+.git-logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: 3em;
+}
+
+.nav{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.nav-lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+
+.nav-logo {
+    padding-right: 4px;
+}
+.nav-activeLink {
+
+    border-radius: 10px;
+    background-color: rgb(192, 178, 234);
+}
