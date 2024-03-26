@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import { Nav } from "@/container/nav/Nav";
+import { SideBarContainer } from "@/container/sideBar/SideBar";
 import { useGetUser } from "@/hooks/api/useGetUser";
 import { CardUser } from "@/container/user/CardUser";
 import { Recommandations } from "@/container/recommandations/Recommandations";
@@ -13,13 +13,13 @@ export default function Home() {
   console.log(user);
   return (
     <div className="container-page">
-      <Nav>
+      <SideBarContainer>
         {user && (
           <>
             <Recommandations followers_url={user} />
           </>
         )}
-      </Nav>
+      </SideBarContainer>
       {user && <CardUser user={user} />}
     </div>
   );
