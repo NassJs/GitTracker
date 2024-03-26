@@ -1,0 +1,34 @@
+name: Node.js CI
+
+on:
+  pull_request:
+    branches:
+      - dev
+
+jobs:
+
+  build-test-front:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    defaults:
+      run:
+        working-directory: ./GitTracker
+
+    steps:
+      - name: Setup Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Dependecies front
+        run: npm install
+
+      - name: RUN ESLINT
+        run: npm run lint
