@@ -6,17 +6,12 @@ on:
       - main
 
 jobs:
-
   build-test-front:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node-version: [20.x]
-
-    defaults:
-      run:
-        working-directory: ./GitTracker
 
     steps:
       - name: Setup Checkout
