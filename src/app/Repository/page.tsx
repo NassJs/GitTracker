@@ -1,10 +1,10 @@
 import React from "react";
-import { Nav } from "@/container/nav/Nav";
+import { SideBarContainer } from "@/container/sideBar/SideBar";
 
 const Repository = () => {
   return (
     <div className="container-page">
-      <Nav />
+      <SideBarContainer>Nass</SideBarContainer>
     </div>
   );
 };
