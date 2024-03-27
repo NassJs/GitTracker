@@ -6,7 +6,7 @@ export const useGetUser = (name: string) => {
 
   const fetchApi = async () => {
     try {
-      const response = await fetch(`https://api.github.com/users/${name}`);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_USER}${name}`);
       const userData = await response.json();
       if (response.ok) {
         console.log("ok fetch");

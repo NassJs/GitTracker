@@ -14,5 +14,8 @@ module.exports = {
         },
       ],
     },
+    env : {
+      USER : process.env.USER,
+    }
   }
   
