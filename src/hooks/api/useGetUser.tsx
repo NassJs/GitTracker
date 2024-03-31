@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { GitHubUser } from "@/models/models";
 
-export const useGetUser = (name: string) => {
-  const [apiLogin, setApiLogin] = useState<GitHubUser | null>();
+type UserType = {
+  name: string | number;
+};
+export const useGetUser = (name: UserType) => {
+  const [apiLogin, setApiLogin] = useState<GitHubUser>();
 
   const fetchApi = async () => {
     try {
