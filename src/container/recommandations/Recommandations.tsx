@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { CardFlex } from "@/components/ui/card";
 import { GitHubUser } from "../../models/models";
 import Image from "next/image";
 interface RecommandationsProps {
@@ -34,8 +35,8 @@ export const Recommandations: React.FC<RecommandationsProps> = ({
       <h3> Recommandations </h3>
       <div>
         {recommandationUser &&
-          recommandationUser.map((recoms) => (
-            <>
+          recommandationUser.map((recoms: any) => (
+            <CardFlex flex="flex m-3 items-center">
               <Image
                 src={recoms.avatar_url}
                 height={20}
@@ -44,7 +45,7 @@ export const Recommandations: React.FC<RecommandationsProps> = ({
                 loading="lazy"
               />
               <div> {recoms.login}</div>
-            </>
+            </CardFlex>
           ))}
       </div>
     </>
