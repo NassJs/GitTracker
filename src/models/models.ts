@@ -32,5 +32,12 @@ export interface GitHubUser {
     created_at?: string;
     updated_at?: string;
 }
+export interface Repository {
+    id: number;
+    node_id: string;
+    name: string;
+    full_name: string;
+    private: boolean;
+  }
   
 
