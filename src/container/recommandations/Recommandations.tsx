@@ -20,7 +20,7 @@ export const Recommandations: React.FC<RecommandationsProps> = ({
 
   const handleCallFollowing = async () => {
     try {
-      console.log("Fetching followers data from:", followers_url);
+   
       const response = await fetch(followers_url.followers_url);
       const followersData = await response.json();
       const threeRecommandationUser = followersData.slice(0, 3);
@@ -29,7 +29,6 @@ export const Recommandations: React.FC<RecommandationsProps> = ({
       console.error("Error fetching followers data:", error);
     }
   };
-
   return (
     <>
       <h3> Recommandations </h3>
@@ -38,6 +37,7 @@ export const Recommandations: React.FC<RecommandationsProps> = ({
           recommandationUser.map((recoms: any) => (
             <CardFlex flex="flex m-3 items-center">
               <Image
+              className="rounded-xl"
                 src={recoms.avatar_url}
                 height={20}
                 width={30}

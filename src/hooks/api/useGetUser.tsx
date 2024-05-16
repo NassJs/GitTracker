@@ -25,5 +25,6 @@ export const useGetUser = (name: UserType) => {
   useEffect(() => {
     fetchApi();
   }, [name]);
+  console.log(apiLogin)
   return apiLogin;
 };
