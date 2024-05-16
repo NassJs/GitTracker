@@ -1,19 +1,22 @@
 "use client";
 
-import React from "react";
-import { useState } from "react";
-export const SearchProfil = () => {
-  const handleSearch = () => {
-    console.log(value);
+import React, { Dispatch, SetStateAction, ChangeEvent, MouseEvent } from "react";
+
+interface TypeSearchProfil {
+  setValue: Dispatch<SetStateAction<string | number>>;
+  handleSearch: (e: ChangeEvent<HTMLInputElement>) => void;
+}
+
+export const SearchProfil = ({ setValue, handleSearch }: TypeSearchProfil) => {
+
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
   };
 
   return (
     <>
-      <input
-        placeholder="search profil"
-        onChange={(e) => setValue(e.target.value)}
-      />
-      <button onClick={handleSearch}>search</button>
+     
     </>
   );
 };
+
